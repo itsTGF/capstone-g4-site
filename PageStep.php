@@ -1,21 +1,5 @@
 <?php
 
-require 'include/database.php';
-
-$conn = getDB();
-
-$sql = "SELECT *
-		FROM goglia_items
-		ORDER BY ID;";
-		
-$results = mysqli_query($conn, $sql);
-
-if ($results === false){
-	echo mysqli_error($conn);
-}else{
-	$articles = mysqli_fetch_all($results, MYSQLI_ASSOC);
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +19,10 @@ if ($results === false){
 	<header id = "midpage">
 	<h3>Items:</h3>
 	</header>
-	
-	<!-- <nav>
-		<a href="PageStep.html">Open Food Facts Data</a> - goes on index.php
-	</nav> -->
-	
+
 	<footer>
 	<p>Link to website</p>
-	<p>return to the top of the <a href="#topePage">page</a>.</p>
+	<p>return to the top of the <a href="#topPage">page</a>.</p>
 	</footer>
 
 </body>
