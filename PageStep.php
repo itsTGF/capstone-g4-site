@@ -25,7 +25,7 @@ $conn = getDB();
     </header>
     
     <?php
-    $sql = "SELECT * FROM goglia_items";
+    $sql = "SELECT * FROM goglia_items WHERE ID='3017620422003'";
     
     $stmt = sqlsrv_query($conn, $sql);
     
@@ -36,7 +36,7 @@ $conn = getDB();
     echo "<table border='1'><tr><th>ID</th><th>Product</th><th>Generic Name</th><th>Brand</th><th>Food Groups</th><th>Quantity</th><th>Serving Size</th><th>Origin</th><th>Ingredients</th><th>Allergens</th><th>Nutri-Score</th><th>Stores Sold In</th></tr>";
     
     while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-        echo "<tr><td>" . $row['ID'] . "</td><td>" . $row['productName'] . "</td><td>" . $row['genName'] . "</td><td>" . $row['brands'] . "</td><td>" . $row['foodGroups'] . "</td><td>" . $row['quantity'] . "</td><td>" . $row['serving'] . "</td><td>" . $row['origin'] . "</td><td>" . $row['ingredients'] . "</td><td>" . $row['allergens'] . "</td><td>" . $row['nutriscore'] . "</td><td>" . $row['stores'] . "</td></tr>";
+        echo "<tr><td>" . $row['id'] . "</td><td>" . $row['prodname'] . "</td><td>" . $row['genname'] . "</td><td>" . $row['brand'] . "</td><td>" . $row['foodgroups'] . "</td><td>" . $row['quantity'] . "</td><td>" . $row['serving'] . "</td><td>" . $row['origin'] . "</td><td>" . $row['ingredients'] . "</td><td>" . $row['allergens'] . "</td><td>" . $row['nutriscore'] . "</td><td>" . $row['stores'] . "</td></tr>";
     }
     
     echo "</table>";
