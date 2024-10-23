@@ -1,6 +1,6 @@
 <?php
 
-require 'includes/database.php';
+require 'include/database.php';
 
 $conn = getDB();
 
