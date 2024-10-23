@@ -17,7 +17,7 @@ $conn = getDB();
 	<body>
 	
 	<nav>
-		<a href="PageStep.html">Open Food Facts Data</a>
+		<a href="PageStep.php">Open Food Facts Data</a>
 	</nav>
 
 </body>
