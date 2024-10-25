@@ -25,7 +25,7 @@ $conn = getDB();
     </header>
     
     <?php
-    $sql = "SELECT * FROM goglia_items WHERE ID='3017620422003'";
+    $sql = "SELECT * FROM goglia_items ORDER BY ID";
     
     $stmt = sqlsrv_query($conn, $sql);
     
