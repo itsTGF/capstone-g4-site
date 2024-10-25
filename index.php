@@ -11,7 +11,7 @@ echo("Hello World!" . PHP_EOL);
 
 $conn = getDB();
 
-$sql = "SELECT id, name, calories FROM edamam.ingredient_info";
+$sql = "SELECT * FROM edamam.ingredient_info";
 $stmt = sqlsrv_query($conn, $sql);
 
 if ($stmt === false) {
