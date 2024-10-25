@@ -28,7 +28,7 @@ echo "<table border = '1'>
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
 	echo "<tr>
 			<td>" . $row['id'] . "</td>
-			<td>" . $row['name]'] . "</td>
+			<td>" . $row['name'] . "</td>
 			<td>" . $row['calories'] . "</td>
 		</tr>";
 }
