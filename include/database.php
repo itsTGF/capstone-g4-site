@@ -15,7 +15,6 @@
 
     $conn = sqlsrv_connect($serverName, $connectionOptions);
     if ($conn) {
-        echo("Connected to the database!" . PHP_EOL);
         return $conn;
     } else {
         die(print_r(sqlsrv_errors(), true));
