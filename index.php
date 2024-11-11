@@ -42,7 +42,7 @@ sqlsrv_free_stmt($stmt);
 	<body>
 	
 	<nav>
-		<a href="PageStep.php">Open Food Facts Data</a>
+		<a href="OpenFood.php">Open Food Facts Data</a>
 	</nav>
 
 </body>
