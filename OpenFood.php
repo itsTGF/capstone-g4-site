@@ -13,6 +13,7 @@ $conn = getDB();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Open Food Facts</title>
 	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="styles.css">
     
 </head>
