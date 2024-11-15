@@ -76,14 +76,14 @@
 	</section>
 
 	<footer>
-  		<p>Computing & Informatics Capstone Project - 2024</p>
+  		<p>Computing & Informatics Capstone Project - 2024 - <a href="https://github.com/itsTGF/capstone-g4-site">GitHub Repo</a></p>
   		<hr>
   		<p>Contributors:</p>
   		<ul>
-     			<li>Benny Pena</li>
-      			<li>Jon Stewart</li>
-      			<li>Justin Goglia</li>
-      			<li>Mariano DiGiacomo</li>
+     		<li>Benny Pena</li>
+      		<li>Jon Stewart</li>
+      		<li>Justin Goglia</li>
+      		<li>Mariano DiGiacomo</li>
     	</ul>
 	</footer>
 	</body>
