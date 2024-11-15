@@ -81,10 +81,10 @@
   		<p>Contributors:</p>
   		<ul>
      			<li>Benny Pena</li>
-      			<li>Jon Stewart
-      			<li>Justin Goglia
-      			<li>Mariano DiGiacomo
-    		</ul>
+      			<li>Jon Stewart</li>
+      			<li>Justin Goglia</li>
+      			<li>Mariano DiGiacomo</li>
+    	</ul>
 	</footer>
 	</body>
 </html>
