@@ -17,7 +17,6 @@ header {
   color: white;
   font-family: "Inter";
   h1 {
-      font-weight: 600;
       text-decoration-line: underline;
       text-decoration-style: wavy;
       text-decoration-thickness: 3px;
@@ -27,12 +26,15 @@ header {
 
 h3 {
   color: #DAAD86;
-  font-family: "Inter";
-  font-weight: 500;
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 800;
 }
 
 a {
-    color: black;
+  color: black;
 }
 
 article {
