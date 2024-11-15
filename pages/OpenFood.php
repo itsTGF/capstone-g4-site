@@ -1,5 +1,5 @@
 <?php
-require 'include/database.php';
+require '../include/database.php';
 
 $conn = getDB();
 ?>
@@ -14,7 +14,7 @@ $conn = getDB();
     <title>Open Food Facts</title>
 	
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     
 </head>
 <body>
