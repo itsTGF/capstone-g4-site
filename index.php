@@ -27,10 +27,11 @@
 	nav ul {
  		 list-style-type: none;
  		 padding: 0;
+		 text-align: center;
 	}
 
 	li { 
-		  margin-bottom: 2em; 
+		 margin-bottom: 2em; 
 	}
 
 	section::after {
