@@ -60,7 +60,7 @@
 	<section>
 		<nav>
     			<ul>
-        			<li><a href="OpenFood.php">Open Food Facts Data</a></li>
+        			<li><a href="pages/OpenFood.php">Open Food Facts Data</a></li>
         			<li><a href="#">_</a></li> <!--Your page reference here-->
         			<li><a href="#">_</a></li> <!--Your page reference here-->
         			<li><a href="#">_</a></li> <!--Your page reference here-->
