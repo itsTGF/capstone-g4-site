@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TheMealDB</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <button>Home</button>
+      </div>
+    </div>
+
+    <h1>Meal Search</h1>
+
+    <div class="filter-container">
+      <label for="tagFilter">Search by Tag:</label>
+      <input type="text" id="tagFilter" placeholder="Enter tag" />
+
+      <label for="categoryFilter">Search by Category:</label>
+      <input type="text" id="categoryFilter" placeholder="Enter category" />
+
+      <label for="areaFilter">Search by Area:</label>
+      <input type="text" id="areaFilter" placeholder="Enter area" />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Area</th>
+          <th>Instructions</th>
+          <th>Thumbnail</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody id="mealsTable"></tbody>
+    </table>
+
+    <div class="footer">&copy; 2024 TheMealDB</div>
+
+    <script src="TheMealDB.js"></script>
+  </body>
+</html>
