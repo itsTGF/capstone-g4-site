@@ -35,21 +35,24 @@ $conn = getDB();
         die(print_r(sqlsrv_errors(), true));
     }
     
-    echo "<table border='1'>
-        <tr>
-            <th>ID</th>
-            <th>Product</th>
-            <th>Generic Name</th>
-            <th>Brand</th>
-            <th>Food Groups</th>
-            <th>Quantity</th>
-            <th>Serving Size</th>
-            <th>Origin</th>
-            <th>Ingredients</th>
-            <th>Allergens</th>
-            <th>Nutri-Score</th>
-            <th>Stores Sold In</th>
-        </tr>";
+    echo "<table class='recipe-table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Generic Name</th>
+                <th>Food Groups</th>
+                <th>Brand</th>
+                <th>Serving Size</th>
+                <th>Quantity</th>
+                <th>Ingredients</th>
+                <th>Origin</th>
+                <th>Nutri-Score</th>
+                <th>Allergens</th>
+                <th>Stores Sold In</th>
+            </tr>
+        </thead>
+        <tbody>";
    
     while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
         echo "<tr>
@@ -68,7 +71,8 @@ $conn = getDB();
         </tr>";
     }
     
-    echo "</table>";
+    echo "</tbody>
+          </table>";
     sqlsrv_free_stmt($stmt);
     ?>
     
