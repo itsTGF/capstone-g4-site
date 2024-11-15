@@ -71,7 +71,7 @@
     			<h3>About Us</h3>
     			<p>This site holds data from four food-related APIs. This platform allows users to explore recipes, what food items they involve, and the nutrients in each item.</p>
     			<hr>
-    			<!--<p>The APIs used are: Open Food Facts, ___, ___, and ___.</p>-->
+    			<p>The APIs used are: Open Food Facts, Edamam, TheMealDB, and Tasty.</p>
 		</article>
 	</section>
 
