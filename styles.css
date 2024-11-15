@@ -52,6 +52,7 @@ table thead tr {
 table tbody tr {
   height: 48px;
   border-bottom: 1px solid #e3f1d5;
+  background-color: #fff5ed;
 }
 
 table tbody tr:hover {
