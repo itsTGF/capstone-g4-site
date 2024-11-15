@@ -18,6 +18,11 @@ header {
   text-decoration-style: wavy;
   text-decoration-thickness: 3px;
   font-family: helvetica;
+  h1 {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 3px;
+  }
 }
 
 
@@ -29,6 +34,14 @@ h3 {
 
 a {
     color: black;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: white;
+  height: 300px;
 }
 
 footer {
