@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Capstone Group 4</title>
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 		<link rel="stylesheet" href="styles.css">
 	
 		<style>
