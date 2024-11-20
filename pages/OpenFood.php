@@ -27,7 +27,7 @@ $conn = getDB();
     <!-- database access -->
     
     <?php
-    $sql = "SELECT * FROM goglia_items WHERE ID='3017620422003'"; //take out WHERE part
+    $sql = "SELECT * FROM goglia_items";
     
     $stmt = sqlsrv_query($conn, $sql);
     
