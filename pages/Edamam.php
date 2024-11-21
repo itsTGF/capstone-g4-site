@@ -57,7 +57,7 @@ $conn = getDB();
     <a href="https://developer.edamam.com/edamam-docs-nutrition-api">Edamam API Documentation</a>
     
     <footer>
-        <p><a href="../index.php">Home</a></p>
+        <p>Return to the <a href="../index.php">homepage</a></p>
     </footer>
 </body>
 </html>

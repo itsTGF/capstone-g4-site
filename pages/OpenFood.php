@@ -85,7 +85,7 @@ $conn = getDB();
     </nav>
 
     <footer>
-        <p>Return to the top of the <a href="#topPage">page</a>.</p>
+        <p>Return to the <a href="../index.php">homepage</a></p>
     </footer>
 </body>
 </html>
