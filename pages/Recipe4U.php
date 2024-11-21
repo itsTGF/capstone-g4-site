@@ -22,7 +22,7 @@ $conn = getDB();
     <h3>Select a Recipe:</h3>
 
     <?php
-    $recipeSql = "SELECT * FROM Recipe4U WHERE ID= '3'";
+    $recipeSql = "SELECT * FROM dbo.Recipes4U WHERE ID= '3'";
     $recipeStmt = sqlsrv_query($conn, $recipeSql);
 
     if ($recipeStmt === false) {
@@ -43,7 +43,7 @@ $conn = getDB();
 
     if (isset($_GET['recipeId'])) {
         $recipeId = $_GET['recipeId'];
-        $detailSql = "SELECT * FROM Recipe4U WHERE id = ?";
+        $detailSql = "SELECT * FROM dbo.Recipes4U WHERE id = ?";
         $detailParams = array($recipeId);
         $detailStmt = sqlsrv_query($conn, $detailSql, $detailParams);
 
