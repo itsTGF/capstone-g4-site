@@ -61,7 +61,7 @@
 		<nav>
     			<ul>
         			<li><a href="/pages/OpenFood.php">Open Food Facts Data</a></li>
-        			<li><a href="TheMealDB.html">TheMealDB</a></li>
+        			<li><a href="/pages/TheMealDB.html">TheMealDB</a></li>
         			<li><a href="/pages/Edamam.php">Edamam</a></li>
         			<li><a href="/pages/Recipe4U.php">Recipe4U</a></li>
     			</ul>
