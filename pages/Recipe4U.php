@@ -22,7 +22,7 @@ $conn = getDB();
     <h3>Select a Recipe:</h3>
 
     <?php
-    $recipeSql = "SELECT * FROM dbo.Recipes4U WHERE ID= '3'";
+    $recipeSql = "SELECT * FROM dbo.Recipes4U";
     $recipeStmt = sqlsrv_query($conn, $recipeSql);
 
     if ($recipeStmt === false) {
