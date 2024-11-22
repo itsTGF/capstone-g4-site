@@ -47,8 +47,8 @@ $conn = getDB();
                 <th>Quantity</th>
                 <th>Ingredients</th>
                 <th>Origin</th>
-                <th>Nutri-Score</th>
                 <th>Allergens</th>
+                <th>Nutri-Score</th>
                 <th>Stores Sold In</th>
             </tr>
         </thead>
