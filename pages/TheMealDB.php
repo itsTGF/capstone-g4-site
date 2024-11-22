@@ -23,62 +23,60 @@ $conn = getDB();
 
     <h1>Meal Search</h1>
 
-    <div class="filter-container">
-        <label for="tagFilter">Search by Tag:</label>
-        <input type="text" id="tagFilter" placeholder="Enter tag" />
+    <?php
+       $sql = "SELECT * FROM mariano_meals";
+       $stmt = sqlsrv_query($conn, $sql);
+       
+       if ($stmt === false) {
+           die(print_r(sqlsrv_errors(), true));
+       }
 
-        <label for="categoryFilter">Search by Category:</label>
-        <input type="text" id="categoryFilter" placeholder="Enter category" />
+       echo "
+       <div class=\"filter-container\">
+         <label for=\"tagFilter\">Search by Tag:</label>
+         <input type=\"text\" id=\"tagFilter\" placeholder=\"Enter tag\" />
 
-        <label for="areaFilter">Search by Area:</label>
-        <input type="text" id="areaFilter" placeholder="Enter area" />
-    </div>
+         <label for=\"categoryFilter\">Search by Category:</label>
+         <input type=\"text\" id=\"categoryFilter\" placeholder=\"Enter category\" />
 
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Area</th>
-            <th>Instructions</th>
-            <th>Thumbnail</th>
-            <th>Tags</th>
-        </tr>
-        </thead>
-        <tbody id="mealsTable"></tbody>
-    </table>
+         <label for=\"areaFilter\">Search by Area:</label>
+         <input type=\"text\" id=\"areaFilter\" placeholder=\"Enter area\" />
+       </div>
+       <table>
+         <thead>
+           <tr>
+             <th>ID</th>
+             <th>Name</th>
+             <th>Category</th>
+             <th>Area</th>
+             <th>Instructions</th>
+             <th>Thumbnail</th>
+             <th>Tags</th>
+           </tr>
+         </thead>
+         <tbody>";
+       
+       while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+           echo "
+           <tr>
+             <td>".htmlspecialchars($row['id'])."</td>
+             <td>".htmlspecialchars($row['name'])."</td>
+             <td>".htmlspecialchars($row['category'])."</td>
+             <td>".htmlspecialchars($row['area'])."</td>
+             <td>".htmlspecialchars($row['instructions'])."</td>
+             <td><img src=\"".htmlspecialchars($row['thumbnail_url'])."\" alt=\"Meal Image\" style=\"max-width: 100px;\"></td>
+             <td>".htmlspecialchars($row['tags'])."</td>
+           </tr>";
+       }
+
+       echo "
+         </tbody>
+       </table>";
+
+       sqlsrv_free_stmt($stmt);
+    ?>
 
     <div class="footer">&copy; 2024 TheMealDB</div>
-
-    <script>
-        const mealsData = <?php
-            // fetch meal data
-            $recipeSql = "SELECT * FROM mariano_meals";
-            $recipeStmt = sqlsrv_query($conn, $recipeSql);
-
-            if ($recipeStmt === false) {
-                die(json([]));
-            }
-
-            $meals = [];
-            while ($row = sqlsrv_fetch_array($recipeStmt, SQLSRV_FETCH_ASSOC)) {
-                $meals[] = [
-                    'id' => htmlspecialchars($row['id']),
-                    'name' => htmlspecialchars($row['name']),
-                    'category' => htmlspecialchars($row['category']),
-                    'area' => htmlspecialchars($row['area']),
-                    'instructions' => htmlspecialchars($row['instructions']),
-                    'thumbnail_url' => htmlspecialchars($row['thumbnail_url']),
-                    'tags' => htmlspecialchars($row['tags']),
-                ];
-            }
-
-            sqlsrv_free_stmt($recipeStmt);
-            echo json($meals); // json output
-        ?>;
-    </script>
-
     <script src="/scripts/TheMealDB.js"></script>
-</body>
+  </body>
 </html>
