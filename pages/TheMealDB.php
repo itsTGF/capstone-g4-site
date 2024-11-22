@@ -12,25 +12,25 @@ $areaFilter = isset($_GET['areaFilter']) ? $_GET['areaFilter'] : '';
 $sql = "SELECT * FROM mariano_meals WHERE 1=1";
 
 if (!empty($tagFilter)) {
-    $sql .= " AND tags LIKE ?";
+    $sql.= " AND tags LIKE ?";
 }
 if (!empty($categoryFilter)) {
-    $sql .= " AND category LIKE ?";
+    $sql.= " AND category LIKE ?";
 }
 if (!empty($areaFilter)) {
-    $sql .= " AND area LIKE ?";
+    $sql.= " AND area LIKE ?";
 }
 
 // execute queries
 $params = [];
 if (!empty($tagFilter)) {
-    $params[] = '%' . $tagFilter . '%';
+    $params[] = '%'.$tagFilter.'%';
 }
 if (!empty($categoryFilter)) {
-    $params[] = '%' . $categoryFilter . '%';
+    $params[] = '%'.$categoryFilter.'%';
 }
 if (!empty($areaFilter)) {
-    $params[] = '%' . $areaFilter . '%';
+    $params[] = '%'.$areaFilter.'%';
 }
 
 $stmt = sqlsrv_query($conn, $sql, $params);
@@ -59,7 +59,7 @@ if ($stmt === false) {
 
     <h1>Meal Search</h1>
 
-    <form id="filterForm" method="get" action="">
+    <form method="get" action="">
       <div class="filter-container">
         <label for="tagFilter">Search by Tag:</label>
         <input
@@ -84,9 +84,10 @@ if ($stmt === false) {
           name="areaFilter"
           value="<?php echo htmlspecialchars($areaFilter); ?>"
           placeholder="Enter area"/>
+        <button type="submit">Search</button>
       </div>
     </form>
-
+    
     <table>
       <thead>
         <tr>
@@ -100,34 +101,25 @@ if ($stmt === false) {
         </tr>
       </thead>
       <tbody>
-        <?php if (sqlsrv_has_rows($stmt)): ?>
-          <?php while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)): ?>
+        <?php
+        while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+            echo "
             <tr>
-              <td><?php echo htmlspecialchars($row['id']); ?></td>
-              <td><?php echo htmlspecialchars($row['name']); ?></td>
-              <td><?php echo htmlspecialchars($row['category']); ?></td>
-              <td><?php echo htmlspecialchars($row['area']); ?></td>
-              <td><?php echo htmlspecialchars($row['instructions']); ?></td>
-              <td><img src="<?php echo htmlspecialchars($row['thumbnail_url']); ?>" alt="Meal Image" style="max-width: 100px;"></td>
-              <td><?php echo htmlspecialchars($row['tags']); ?></td>
-            </tr>
-          <?php endwhile; ?>
-        <?php else: ?>
-          <tr>
-            <td colspan="7">No meals match your search criteria.</td>
-          </tr>
-        <?php endif; ?>
+              <td>".htmlspecialchars($row['id'])."</td>
+              <td>".htmlspecialchars($row['name'])."</td>
+              <td>".htmlspecialchars($row['category'])."</td>
+              <td>".htmlspecialchars($row['area'])."</td>
+              <td>".htmlspecialchars($row['instructions'])."</td>
+              <td><img src=\"".htmlspecialchars($row['thumbnail_url'])."\" alt=\"Meal Image\" style=\"max-width: 100px;\"></td>
+              <td>".htmlspecialchars($row['tags'])."</td>
+            </tr>";
+        }
+
+        sqlsrv_free_stmt($stmt);
+        ?>
       </tbody>
     </table>
 
     <div class="footer">&copy; 2024 TheMealDB</div>
-
-    <script>
-      document.querySelectorAll('#filterForm input').forEach(input => {
-        input.addEventListener('input', () => {
-          document.getElementById('filterForm').submit();
-        });
-      });
-    </script>
   </body>
 </html>
