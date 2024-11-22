@@ -69,6 +69,14 @@ $conn = getDB();
                       <tr><th>Protein</th><td>" . htmlspecialchars($row['protein']) . "g</td></tr>
                       <tr><th>Sugar</th><td>" . htmlspecialchars($row['sugar']) . "g</td></tr>
                   </table>";
+
+            // New Section for Instructions
+            echo "<h3>Instructions:</h3>
+                  <p>" . nl2br(htmlspecialchars($row['instructions'])) . "</p>";
+
+            // New Section for Tags
+            echo "<h3>Tags:</h3>
+                  <p>" . htmlspecialchars($row['tags']) . "</p>";
         } else {
             echo "<p>No recipe found with the selected ID.</p>";
         }
