@@ -41,12 +41,12 @@ $conn = getDB();
                 <th>ID</th>
                 <th>Product</th>
                 <th>Generic Name</th>
-                <th>Food Groups</th>
                 <th>Brand</th>
-                <th>Serving Size</th>
+                <th>Food Groups</th>
                 <th>Quantity</th>
-                <th>Ingredients</th>
+                <th>Serving Size</th>
                 <th>Origin</th>
+                <th>Ingredients</th>
                 <th>Allergens</th>
                 <th>Nutri-Score</th>
                 <th>Stores Sold In</th>
