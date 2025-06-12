@@ -1,4 +1,4 @@
-# Capstone Website Project
+# Capstone Website Project - Recipe Rundown
 
 A web application that connects to an SQL database loaded with recipe and food data from various sources and displays them using PHP
 
@@ -22,3 +22,7 @@ Once the database was filled, we all worked on the frontend application using PH
 - APIs: Edamam, OpenFood, Recipe4U, TheMealDB
 - Hosting: Azure Web Apps
 - CI/CD: GitHub Actions
+
+## Preview
+
+![Recipe Rundown Preview](https://cdn.imgchest.com/files/7pjcqowd5z7.png "Recipe Rundown Preview")
